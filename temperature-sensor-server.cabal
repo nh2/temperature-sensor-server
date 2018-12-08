@@ -1,0 +1,23 @@
+name:                temperature-sensor-server
+version:             0.1
+synopsis:            temperature sensor server connected to arduino
+license:             BSD3
+author:              Niklas Hambüchen & Hubert Marlikowski
+maintainer:          mail@nh2.me
+build-type:          Simple
+cabal-version:       >=1.8
+
+source-repository head
+  type:     git
+  location: git://github.com/nh2/temperature-sensor-server.git
+
+executable           temperature-sensor-server
+  main-is:           app/Main.hs
+  build-depends:     base >= 4.5 && < 5
+                   , async
+                   , bytestring
+                   , optparse-applicative
+                   , scotty
+                   , serialport
+                   , text
+  ghc-options:       -Wall -threaded

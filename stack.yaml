@@ -1,0 +1,5 @@
+resolver: lts-12.21
+packages:
+  - .
+extra-deps:
+  - serialport-0.4.7
